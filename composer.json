@@ -1,0 +1,17 @@
+{
+    "name": "staconik/php-vk-community-bot",
+    "description": "Library to create a community bot in VK",
+    "require": {
+        "staconik/php-vk-api": "^0.1.0"
+    },
+    "require-dev": {
+        "composer-plugin-api": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stas Pazhoha",
+            "email": "staconik@gmail.com"
+        }
+    ]
+}

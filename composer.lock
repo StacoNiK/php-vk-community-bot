@@ -1,0 +1,52 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "f5576b1b39799f5db6e650f31822534b",
+    "content-hash": "b100efffa1380a4561e3aea6828712ac",
+    "packages": [
+        {
+            "name": "staconik/php-vk-api",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StacoNiK/php-vk-api.git",
+                "reference": "16e0ba4f5222fb2fd1f7378966f1548907bf7ebc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StacoNiK/php-vk-api/zipball/16e0ba4f5222fb2fd1f7378966f1548907bf7ebc",
+                "reference": "16e0ba4f5222fb2fd1f7378966f1548907bf7ebc",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "VKApi\\": "src/VKApi/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stas Pazhoha",
+                    "email": "staconik@gmail.com"
+                }
+            ],
+            "description": "PHP library for VK.com API",
+            "time": "2016-08-06 08:51:04"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
