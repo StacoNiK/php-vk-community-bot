@@ -13,5 +13,8 @@
             "name": "Stas Pazhoha",
             "email": "staconik@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {"VKBot\\": "src/VKBot/"}
+    }
 }

@@ -19,6 +19,7 @@ class Event
         $result = false;
         switch ($data->type) { 
             case 'message_new':
+                $this->onBeforeEventMessage($data->object);
                 $result = $this->onMessage($data->object);
                 break;
             case 'message_allow':
@@ -34,18 +35,23 @@ class Event
         return $result;
     }
 
-    public function onMessage($message)
+    protected function onMessage($message)
     {
         
     }
 
-    public function onMessageAllow($user_id, $key = '')
+    protected function onMessageAllow($user_id, $key = '')
     {
 
     }
 
-    public function onMessageDeny($user_id)
+    protected function onMessageDeny($user_id)
     {
 
+    }
+
+    protected function onBeforeEventMessage($message)
+    {
+        \VKBot\CommandManager::searchCommandOnText($message);
     }
 } 

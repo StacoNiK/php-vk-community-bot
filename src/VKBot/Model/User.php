@@ -44,6 +44,11 @@ class User
         return $this->get('first_name').' '.$this->get('last_name');
     }
 
+    public function getId()
+    {
+        return $this->get('id');
+    }
+
     public function get($key)
     {
         if (array_key_exists($key, $this->user_info)) {
@@ -51,5 +56,5 @@ class User
         } else {
             return false;
         }
-    } 
+    }
 }
