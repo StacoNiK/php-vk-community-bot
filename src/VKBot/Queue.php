@@ -20,7 +20,7 @@ class Queue
     {
         $result = $this->database->query("SELECT * FROM `".$this->table_name."` WHERE `status` = 0 LIMIT 1");
         $item = $result->fetch(PDO::FETCH_OBJ);
-        $task = new Task($item->id, $item->data, $item->timestamp, $item->status);
+        $task = new Task($item->id, json_decode($item->data, true), $item->timestamp, $item->status);
         return $task;
     }
 
