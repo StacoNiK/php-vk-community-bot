@@ -2,7 +2,8 @@
 
 class Event
 {
-    protected $confirmation_token;
+    protected $confirmation_token = '';
+    protected $on_message_listener = false;
 
     public function __construct($confirmation_token = '')
     {
@@ -20,6 +21,9 @@ class Event
         switch ($data->type) { 
             case 'message_new':
                 $this->onBeforeEventMessage($data->object);
+                if ($this->on_message_listener) {
+                    $this->on_message_listener($data->object);
+                }
                 $result = $this->onMessage($data->object);
                 break;
             case 'message_allow':
@@ -33,6 +37,11 @@ class Event
                 break;
         }
         return $result;
+    }
+
+    public function setOnMessageListener($listener)
+    {
+        $this->on_message_listener = $listener;
     }
 
     protected function onMessage($message)
