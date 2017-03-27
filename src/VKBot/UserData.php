@@ -21,9 +21,8 @@ class UserData
 
     public function add($vk_id, $data, $state)
     {
-        $json = json_encode($data);
         $last_activity = time();
-        $this->database->query("INSERT INTO `".$this->table_name."` SET `vk_id` = ?, `data` = ?, `state` = ?, `last_activity` = ?", $vk_id, $json, $state, $last_activity);
+        $this->database->query("INSERT INTO `".$this->table_name."` SET `vk_id` = ?, `data` = ?, `state` = ?, `last_activity` = ?", $vk_id, $data, $state, $last_activity);
     }
 
     public function setByVkId($vk_id, $key, $value)
