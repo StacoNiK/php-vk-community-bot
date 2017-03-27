@@ -33,7 +33,7 @@ class UserData
     public function getByVkId($vk_id)
     {
         $result = $this->database->query("SELECT * FROM `".$this->table_name."` WHERE `vk_id` = ?  LIMIT 1", $vk_id);
-        $data = $result->fetch(PDO::FETCH_OBJ);
+        $data = $result->fetch(\PDO::FETCH_OBJ);
         return $data;
     }
 }
