@@ -21,7 +21,7 @@ class Queue
         $result = $this->database->query("SELECT * FROM `".$this->table_name."` WHERE `status` = 0 LIMIT 1");
         if ($result->rowCount() > 0) {
             $item = $result->fetch(\PDO::FETCH_OBJ);
-            $task = new Task($item->id, json_decode($item->data, true), $item->timestamp, $item->status);
+            $task = new Model\Task($item->id, json_decode($item->data, true), $item->timestamp, $item->status);
             return $task;
         }
         return false;
