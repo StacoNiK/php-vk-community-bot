@@ -13,7 +13,7 @@ class UserData
     public function exists($vk_id)
     {
         $result = $this->database->query("SELECT * FROM `".$this->table_name."` WHERE `vk_id` = ?  LIMIT 1", $vk_id);
-        if ($result->rowCount > 0) {
+        if ($result->rowCount() > 0) {
             return true;
         }
         return false;
