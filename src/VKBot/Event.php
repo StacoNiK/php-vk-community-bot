@@ -61,6 +61,6 @@ class Event
 
     protected function onBeforeEventMessage($message)
     {
-        \VKBot\CommandManager::searchCommandOnText($message);
+        \VKBot\CommandManager::searchCommandOnMessage($message);
     }
 } 
