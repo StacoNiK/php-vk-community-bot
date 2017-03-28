@@ -4,9 +4,6 @@
     "require": {
         "staconik/php-vk-api": "dev-master"
     },
-    "require-dev": {
-        "composer-plugin-api": "^1.1"
-    },
     "license": "MIT",
     "authors": [
         {
