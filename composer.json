@@ -2,7 +2,7 @@
     "name": "staconik/php-vk-community-bot",
     "description": "Library to create a community bot in VK",
     "require": {
-        "staconik/php-vk-api": "^0.1.0"
+        "staconik/php-vk-api": "dev-master"
     },
     "require-dev": {
         "composer-plugin-api": "^1.1"
